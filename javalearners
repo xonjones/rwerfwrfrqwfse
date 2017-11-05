@@ -1,0 +1,536 @@
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventHandler;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import javafx.geometry.Insets;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
+import javafx.scene.layout.GridPane;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.*;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.layout.HBox;
+import javafx.*;
+import java.io.*;
+import java.util.*;
+import java.awt.Container;
+import java.awt.EventQueue;
+import javax.swing.JButton;
+import javax.swing.JComponent;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+
+public class FXIDE extends Application implements EventHandler {
+
+ Stage window;
+ 
+ Scene scene, scene0, scene1, scene2, scene3, scene4, scene5, scene6, scene7, scene8, scene5a, scene5b, scene5c,scene5d,scene5e;
+ 
+ public static void main(String[] args) {
+  launch(args);
+ }
+
+ @Override
+ public void start(Stage primaryStage) throws Exception {
+  window = primaryStage;
+  window.setTitle("JavaLearners");
+
+
+  GridPane gridmenu = new GridPane();
+  gridmenu.setPadding(new Insets(35, 20, 20, 20));
+  gridmenu.setVgap(10);
+  gridmenu.setHgap(10);
+ // gridmenu.setGridLinesVisible(true);
+  
+  Scene scene = new Scene(gridmenu, 500, 200);
+  
+  GridPane grid0 = new GridPane();
+  grid0.setPadding(new Insets(35, 20, 20, 20));
+  grid0.setVgap(10);
+  grid0.setHgap(10);
+  //grid0.setGridLinesVisible(true);
+  
+  GridPane grid1 = new GridPane();
+  grid1.setPadding(new Insets(35, 20, 20, 20));
+  grid1.setVgap(10);
+  grid1.setHgap(10);
+  //grid1.setGridLinesVisible(true);
+  
+  GridPane grid2 = new GridPane();
+  grid2.setPadding(new Insets(35, 20, 20, 20));
+  grid2.setVgap(10);
+  grid2.setHgap(10);
+  //grid2.setGridLinesVisible(true);
+  
+  GridPane grid3 = new GridPane();
+  grid3.setPadding(new Insets(35, 20, 20, 20));
+  grid3.setVgap(10);
+  grid3.setHgap(10);
+  //grid3.setGridLinesVisible(true);
+  
+  GridPane grid4 = new GridPane();
+  grid4.setPadding(new Insets(35, 20, 20, 20));
+  grid4.setVgap(10);
+  grid4.setHgap(10);
+  //grid4.setGridLinesVisible(true);
+  
+  GridPane grid5 = new GridPane();
+  grid5.setPadding(new Insets(35, 20, 20, 20));
+  grid5.setVgap(10);
+  grid5.setHgap(10);
+  // grid5.setGridLinesVisible(true);
+  
+  GridPane grid5a = new GridPane();
+  grid5a.setPadding(new Insets(35, 20, 20, 20));
+  grid5a.setVgap(10);
+  grid5a.setHgap(10);
+  //grid5a.setGridLinesVisible(true);
+  
+  GridPane grid5b = new GridPane();
+  grid5b.setPadding(new Insets(35, 20, 20, 20));
+  grid5b.setVgap(10);
+  grid5b.setHgap(10);
+  //grid5b.setGridLinesVisible(true);
+  
+  GridPane grid5c = new GridPane();
+  grid5c.setPadding(new Insets(35, 20, 20, 20));
+  grid5c.setVgap(10);
+  grid5c.setHgap(10);
+  //grid5c.setGridLinesVisible(true);
+  
+  GridPane grid5d = new GridPane();
+  grid5d.setPadding(new Insets(35, 20, 20, 20));
+  grid5d.setVgap(10);
+  grid5d.setHgap(10);
+  //grid5d.setGridLinesVisible(true);
+  
+  GridPane grid5e = new GridPane();
+  grid5e.setPadding(new Insets(35, 20, 20, 20));
+  grid5e.setVgap(10);
+  grid5e.setHgap(10);
+  //grid5e.setGridLinesVisible(true);
+  
+  GridPane grid6 = new GridPane();
+  grid6.setPadding(new Insets(35, 20, 20, 20));
+  grid6.setVgap(10);
+  grid6.setHgap(10);
+  //grid6.setGridLinesVisible(true);
+  
+  GridPane grid7 = new GridPane();
+  grid7.setPadding(new Insets(35, 20, 20, 20));
+  grid7.setVgap(10);
+  grid7.setHgap(10);
+  //grid7.setGridLinesVisible(true);
+  
+  GridPane grid8 = new GridPane();
+  grid8.setPadding(new Insets(35, 20, 20, 20));
+  grid8.setVgap(10);
+  grid8.setHgap(10);
+  grid8.setGridLinesVisible(true);
+  
+  Label nameLabel = new Label("Menu ");
+  GridPane.setConstraints(nameLabel, 0, 0);
+  
+  //TextField nameInput = new TextField("x");
+  //GridPane.setConstraints(nameInput, 1, 0);
+   
+   Button menubutton = new Button("Main Menu");
+   GridPane.setConstraints(menubutton, 6, 1);
+   menubutton.setOnAction(e -> window.setScene(scene));
+   
+   Button menubutton1 = new Button("Main Menu");
+   GridPane.setConstraints(menubutton1, 6, 1);
+   menubutton1.setOnAction(e -> window.setScene(scene));
+   
+   Button menubutton2 = new Button("Main Menu");
+   GridPane.setConstraints(menubutton2, 6, 1);
+   menubutton2.setOnAction(e -> window.setScene(scene));
+   
+   Button menubutton3 = new Button("Main Menu");
+   GridPane.setConstraints(menubutton3, 6, 1);
+   menubutton3.setOnAction(e -> window.setScene(scene));
+   
+   Button menubutton4 = new Button("Main Menu");
+   GridPane.setConstraints(menubutton4, 6, 1);
+   menubutton4.setOnAction(e -> window.setScene(scene));
+   
+   Button menubutton5 = new Button("Main Menu");
+   GridPane.setConstraints(menubutton5, 6, 1);
+   menubutton5.setOnAction(e -> window.setScene(scene));
+   
+   Button menubutton5a = new Button("Main Menu");
+   GridPane.setConstraints(menubutton5a, 6, 1);
+   menubutton5a.setOnAction(e -> window.setScene(scene));
+   
+   Button menubutton5b = new Button("Main Menu");
+   GridPane.setConstraints(menubutton5b, 6, 1);
+   menubutton5b.setOnAction(e -> window.setScene(scene));
+   
+   Button menubutton5c = new Button("Main Menu");
+   GridPane.setConstraints(menubutton5c, 6, 1);
+   menubutton5c.setOnAction(e -> window.setScene(scene));
+   
+   Button menubutton5d = new Button("Main Menu");
+   GridPane.setConstraints(menubutton5d, 6, 1);
+   menubutton5d.setOnAction(e -> window.setScene(scene));
+   
+   Button menubutton5e = new Button("Main Menu");
+   GridPane.setConstraints(menubutton5e, 6, 1);
+   menubutton5e.setOnAction(e -> window.setScene(scene));
+   
+   Button menu5abutton = new Button("Lesson 5");
+   GridPane.setConstraints(menu5abutton, 3, 1);
+   menu5abutton.setOnAction(e -> window.setScene(scene5));
+   
+   Button menu5bbutton = new Button("Lesson 5");
+   GridPane.setConstraints(menu5bbutton, 3, 1);
+   menu5bbutton.setOnAction(e -> window.setScene(scene5));
+   
+   Button menu5cbutton = new Button("Lesson 5");
+   GridPane.setConstraints(menu5cbutton, 3, 1);
+   menu5cbutton.setOnAction(e -> window.setScene(scene5));
+   
+   Button menu5dbutton = new Button("Lesson 5");
+   GridPane.setConstraints(menu5dbutton, 3, 1);
+   menu5dbutton.setOnAction(e -> window.setScene(scene5));
+   
+
+   
+   Button menu5ebutton = new Button("Lesson 5");
+	GridPane.setConstraints(menu5ebutton, 3, 1);
+	menu5ebutton.setOnAction(e -> window.setScene(scene5));
+	
+	Button menubutton6 = new Button("Main Menu");
+	GridPane.setConstraints(menubutton6, 6, 1);
+	menubutton6.setOnAction(e -> window.setScene(scene));
+	
+	Button menubutton7 = new Button("Main Menu");
+	GridPane.setConstraints(menubutton7, 6, 1);
+	menubutton7.setOnAction(e -> window.setScene(scene));
+
+
+   
+   Button menubutton8 = new Button("Main Menu");
+   GridPane.setConstraints(menubutton8, 6, 1);
+   menubutton8.setOnAction(e -> window.setScene(scene));
+   
+   Label label0 = new Label("Hello, we will start with learning about how to print something out. In java, \nto print something out, you say System.out.print().  Inside the parentheses \nyou put what you want to say in quotes. If you want to print something on a\n new line, use System.out.println().  This will print everything inside the \nparentheses on a new line.\n\nNow it is time to test it out yourself. Try to print out 'Hello World' in the \nconsole.");
+   label0.setPrefSize(500, 1000);
+   GridPane.setConstraints(label0, 6, 2);
+   TextArea textfield0 = new TextArea("import java.util.*;\nimport java.io.*;\npublic class HelloWorld{\n\tpublic static void main(String args[]){\n\t\tSystem.out.println();\n\t}\n}");
+   grid0.add(textfield0, 12, 2);
+   
+   
+   Label label1 = new Label();
+   label1.setWrapText(true);
+   label1.setText("Nice job with printing. There are 5 main data types in Java: char, String, int, double, and booleans. A char is one character. This character can be any symbol or number, not just letters. A string is just a bunch characters put together. when you initialize a string, you have to make the type capitalized. This is because a string is not a primitive data type. An int is any integer. This is any number that is not a decimal. This means that it can be any whole number positive or negative. A double is any decimal value. It can be positive or negative. Booleans are variables that have only 2 values: true or false. Will will get into what this is used for in the next unit. Create a program that asks the user for their name, last initial, grade, and GPA and reads it all in.");
+   label1.setPrefSize(500, 1000);
+   GridPane.setConstraints(label1, 6, 2);
+   TextArea textfield1 = new TextArea("import java.util.*;\nimport java.io.*;\npublic class DataTypes{\n\tpublic static void main(String args[]){\n\t\tint n  = 10;\n\t\tString myName = "+(char)34+"My Name"+(char)34+";\n\t\tchar myLastInitial = 'K';\n\t\tdouble myGPA = 3.75\n\t}\n}");
+   grid1.add(textfield1, 12, 2);
+   
+   Label label2 = new Label();
+   label2.setWrapText(true);
+   label2.setText("A boolean is a variable that has only 2 values: true or false. This is really useful to see if a certain condition is true or not. For example, if you need to see if someone is an adult or not, you can ask them and store true or false. This could be useful to see  if the user can get a driver's license or for other important information. To use these booleans, you will need if statements.  In these statements, you check if something is true, and if the condition is true, then it will execute what is inside the statement. There is also logic that is used in if statement, like 'and' and 'or'. This is useful if you need to check if conditions are true. If they all need to be true, then you can use the symbol && to separate the different conditions. If you put these into your statement, that means that all of the conditions need to be true in order for the code inside the statement to execute. There is also a symbol '||'  which stands for an or operator. This is used if just one of many conditions needs to be true.  So, if you put this into your statement, if any of the conditions in the statement are true, then the code inside the statement will execute. An if else ladder is a collection of if statements. You start with one if statement, if that is true, then it executes what is in that  statement. If not, then it will move on to the next statement which has another condition to check. This will continue for all the else if  statements, but if all of those fail, then you need a fall back, so you must put in an else statement that will be the default. Make a program that asks for the the users for their grade and outputs their letter grade (A=90-100, B=80-89, C=60-79, D=50-59,F= <59)");
+   label2.setPrefSize(500, 2000);
+   GridPane.setConstraints(label2, 6, 2);
+   TextArea textfield2 = new TextArea("import java.util.*;\nimport java.io.*;\npublic class BooleanLogic{\n\tpublic static void main(String args[]){\n\t\tboolean isAnimal = true;\n\t\tboolean isCat  = true;\n\t\tboolean isDog = false;\n\t\tif(isAnimal){\n\t\t\t//This should work\n\t\t\tSystem.out.println("+(char)34+"It is an animal"+(char)34+");\n\t\t}\n\t\tif(isDog&&isCat){\n\t\t\t//This should not work\n\t\t\tSystem.out.println("+(char)34+"It is both a dog and a cat"+(char)34+");\n\t\t}else if(isDog || isCat){\n\t\t\t//This should work\n\t\t\tSystem.out.println("+(char)34+"It is either a dog or a cat"+(char)34+");\n\t\t}\n\t}\n}");
+   grid2.add(textfield2, 12, 2);
+
+   Label label3 = new Label();
+   label3.setWrapText(true);
+   label3.setText("Ok, well done learning if statements and booleans. Now we are going to learn loops. There are two main types of loops: for loops and while loops. While loops execute the code inside the loop while a certain condition is true. Another variation of this is a do while loop. The only difference between a while loop and a do while loop is that a while loop will not execute the code even once while the condition is false, however the do while loop will execute the code once, then if the condition is false it will break out of the loop. For loops have three part to it: initializing the increment, setting a condition, and incrementing the incrementer. The increment is generally expressed as the letter i. Basically what is happening is you start a variable at what ever value you pick. You then set a condition where you want the loop to stop, for example, you would start a  variable at 0 and make a condition where it stays in the loop when that variable is less than 7.  The last part is incrementing the variable which is basically just making the variable got up or down towards your break condition. Write a program that prints out the numbers from 1 to 100 using a loop.");
+   label3.setPrefSize(500, 2000);
+   GridPane.setConstraints(label3, 6, 2);
+   TextArea textfield3 = new TextArea("import java.util.*;\nimport java.io.*;\npublic class Loops{\n\tpublic static void main(String args[]){\n\t\tfor(int i = 0;i<10;i++){\n\t\t\t//This will print out all number between 0 and 10 not \n\t\t\t//including 10 because the loop breaks out at 10\n\t\t\tSystem.out.println(i);\n\t\t}\n\t\tint x = 0;\n\t\twhile(i<=9){\n\t\t\t//This should print all numbers from 0 to 9\n\t\t\tSystem.out.println(x);\n\t\t\tx++;\n\t\t}\n\t\t\t\n\t}\n}");
+   grid3.add(textfield3, 12, 2);
+   
+   Label label4 = new Label();
+   label4.setWrapText(true);
+   label4.setText("Now that you know what goes into the main methods, you should know what the main method is and what it does. The main method is where all of your code is run, it is the part of the code that says  \npublic static void main(String[] args){\n\n}\ncurrently you have been writing all of your code in this method. This will not always be the case, for example in the next unit you will learn how to write other methods and pass them into the main method. The main method is where all of the code is eventually run. If you want something to be run it has to be passed into the main method or be passed into something that is passed into the main method. You should also know what those import satements at the top of the code mean. These are used to bring in packages that are already built into java. You can use these packages to do things that arent built into the java interface. In the case of all of these programs, we are importing util to be able to read in what the user says. The packages are really useful when you need to making advanced programs and need to import things like graphics.");
+   label4.setPrefSize(500, 2000);
+   GridPane.setConstraints(label4, 6, 2);
+   TextArea textfield4 = new TextArea("import java.util.*;\nimport java.io.*;\npublic class Loops{\n\tpublic static void main(String args[]){\n\t\t\t\n\t}\n}");
+   grid4.add(textfield4, 12, 2);
+   
+   Label label5a = new Label();
+   label5a.setWrapText(true);
+   label5a.setText("There are many types of data structures in java, but we are only going to learn 4 main types: arrays, lists, queues, and stacks.");
+   label5a.setPrefSize(500, 2000);
+   GridPane.setConstraints(label5a, 6, 2);
+   TextArea textfield5a = new TextArea("import java.util.*;\nimport java.io.*;\npublic class DataStructures{\n\tpublic static void main(String args[]){\n\t\tint[] intArray = new int[10];\n\t\tArrayList al = new Arraylist<Integer>();\n\t\tLinkedList ll = new Linkedlist<Integer>();\n\t\tStack st = new Stack<Integer>();\n\t\tQueue q = new Queue<Integer>();\n\t}\n}");
+   grid5a.add(textfield5a, 12, 2);
+   
+   Label label5b = new Label();
+   label5b.setWrapText(true);
+   label5b.setText("The simplest of these data types is an array. An array is just a way to put objects of the same type into a structure that makes it easy to store and retrieve values. An array can store any type and stores the variables in an index of their own. The array has a set index from the start which you initialize at the beginning. In order to initialize these values you may want to use a for loop. This will make it a lot simple you can do the same thing in order to print out these values. Another functions you can do with arrays is check the size of an array using .length. You can also make a two dimensional array which you can do where each element has a distinct position at [i][j]. You can initialize this using nested for loops where you put one for loop inside another. These types of loops are executed from the innermost to the outermost. These two dimensional structures are used to store something that may be in a two dimensional field or store things in a grid.");
+   label5b.setPrefSize(500, 2000);
+   GridPane.setConstraints(label5b, 6, 2);
+   TextArea textfield5b = new TextArea("import java.util.*;\nimport java.io.*;\npublic class Arrays{\n\tpublic static void main(String args[]){\n\t\tint[] intArray = new int[10];\n\t\tint[][] twodArray= new int[10][10];\n\t\tfor(int i = 0;i<10;i++){\n\t\t\t//Initializes array with all values of 6\n\t\t\tintArray[i]=6;\n\t\t}\n\t\tfor(int i = 0;i<10){\n\t\t\tfor(int j = 0;j<10;j++;){\n\t\t\t\t//fill array with 100s\n\t\t\t\ttwodArray[i][j]=100;\n\t\t\t}\n\t\t}\n\t}\n}");
+   grid5b.add(textfield5b, 12, 2);
+   
+   Label label5c = new Label();
+   label5c.setWrapText(true);
+   label5c.setText("The next data structure we will learn is a list. A list is an ordered collection of objects that can be retrieved from the position that they are put in. There are two types of Lists we will cover: LinkedLists and Arraylists. An ArrayList is a list that acts like an array, but you can continually add value to the list without manually changing the size each time. This is useful for storing an unknown amount of data. You can check how much data is in the list by using .size(). You can also use some methods with arraylists which include .get(),.add(),.remove(), .clear(), and .contains(). .gets() retrieves the value at the given location. .remove() retrieves and takes out the value at a given location. .add() adds a value to the arraylist. .clear() removes all of the values in the array without retrieving them. .contains() checks if a certain value is in the arraylist. A LinkedList is a list that has a starting value that points to the next value which points to the value before and the value after. This means that each element in the list knows which element is before and after it if there is one. This is useful when you need to add a value into the middle of a list because it will take the same amount of time to add something to the middle as the beginning or the end. However, in an Arraylist if you want to add something to the middle you have to shift all of the elements after the element you added down one which can be very time consuming. Also, to add elements, this list does not have to resize if it gets to big because it can add elements by just changing which element the previous one is pointing to. For example say you wanted to add 4 to the list 1<->2<->3<->5<->6<->7. You can see that 3 is pointing to 2 and 5, and 5 is pointing to 3 and 6. If we change 3 to be pointing at 2 and 4, and change 5 to be pointing at 4 and 6, then 4 will be added to the list with pointers at 3 and 5. You can still check how much data is in the list by using .size(). You can also use some methods with linkedlists which include .get(),.add(),.remove(), .clear(), and .contains(). .gets() retrieves the value at the given location. .remove() retrieves and takes out the value at a given location. .add() adds a value to the arraylist. .clear() removes all of the values in the array without retrieving them. .contains() checks if a certain value is in the arraylist.");
+   label5c.setPrefSize(500, 2500);
+   GridPane.setConstraints(label5c, 6, 2);
+   TextArea textfield5c = new TextArea("import java.util.*;\nimport java.io.*;\npublic class Arrays{\n\u0009public static void main(String args[]){\n\u0009\u0009ArrayList al = new ArrayList<Integer>();\n\u0009\u0009LinkedList ll = new LinkedList<Integer>();\n\u0009\u0009for(int i = 0;i<10;i++){\n\u0009\u0009\u0009//Initializes arrayList with all values of 6\n\u0009\u0009\u0009al.add(6);\n\u0009\u0009}\n\u0009\u0009for(int i = 0;i<10){\n\u0009\u0009\u0009//Initializes arrayList with all values of 100\n\u0009\u0009\u0009ll.add(100);\n\u0009\u0009}\n\u0009}\n}");
+   grid5c.add(textfield5c, 12, 2);
+   
+   Label label5d = new Label();
+   label5d.setWrapText(true);
+   label5d.setText("A queue is a first in first out structure. What I mean by this is that whichever element was added first will be that first to be taken out of the structure. Think of a line for a restaurant, whoever gets in line first is the first be seated for their dinner. Methods that you can use with queues are .add(), .poll(), .peek(), .size(), .isEmpty(), and .contains(). .peek() retrieves the value at a given location. .poll() retrieves and takes out the value at a given location. .add() adds a value to the arraylist. .contains() checks if a certain value is in the queue. You can still check how much data is in the queue by using .size(). You can check if the queue is empty or not by using .isEmpty(), this returns a boolean, either true or false.");
+   label5d.setPrefSize(500, 2000);
+   GridPane.setConstraints(label5d, 6, 2);
+   TextArea textfield5d = new TextArea("import java.util.*;\nimport java.io.*;\npublic class Queue{\n\u0009public static void main(String args[]){\n\u0009\u0009Queue q = new Queue<Integer>();\n\u0009\u0009q.add(7);\n\u0009\u0009q.add(6);\n\u0009\u0009q.add(8);\n\u0009\u0009q.add(3);\n\u0009\u0009while(!q.isEmpty()){\n\u0009\u0009\u0009if(q.peek()>=7){\n\u0009\u0009\u0009\u0009q.poll();\n\u0009\u0009\u0009}else {\n\u0009\u0009\u0009\u0009System.out.println(q.poll());\n\u0009\u0009\u0009}\n\u0009\u0009}\n\u0009}\n}");
+   grid5d.add(textfield5d, 12, 2);
+   
+   Label label5e = new Label();
+	label5e.setWrapText(true);
+	label5e.setText("A stack is a last in first out structure. What I mean by this is that the last element to be entered will be the first to be taken out of the stack. Think of a stack of coins, when you are stacking coins, you keep on adding them to the top, but if you want to remove one, you also have to remove from the top, otherwise the entire stack will fall. Methods that you can use in a stack are .push(), .pop(), .peek(), .empty(), and .search(). .peek() retrieves the value at a given location. .pop() retrieves and takes out the value at a given location. .puush() adds a value to the stack. .search() checks if a certain value is in the queue. You can still check how much data is in the queue by using .size(). You can check if the queue is empty or not by using .empty(), this returns a boolean, either true or false.");
+	label5e.setPrefSize(500, 2000);
+	GridPane.setConstraints(label5e, 6, 2);
+	TextArea textfield5e = new TextArea("import java.util.*;\nimport java.io.*;\npublic class Queue{\n\u0009public static void main(String args[]){\n\u0009\u0009Stack s = new Stack<Integer>();\n\u0009\u0009a.push(7);\n\u0009\u0009a.push(6);\n\u0009\u0009a.push(8);\n\u0009\u0009a.push(3);\n\u0009\u0009while(!s.empty()){\n\u0009\u0009\u0009if(s.peek()>=7){\n\u0009\u0009\u0009\u0009s.pop();\n\u0009\u0009\u0009}else {\n\u0009\u0009\u0009\u0009System.out.println(s.pop());\n\u0009\u0009\u0009}\n\u0009\u0009}\n\u0009}\n}");
+	grid5e.add(textfield5e, 12, 2);
+	
+	Label label6 = new Label();
+	label6.setWrapText(true);
+	label6.setText("A method is a set of code which is referred to by name and can be called at any place in a program simply by utilizing the method's name. Think of a method as a subprogram that acts on data and often returns a value. This value can be anything from an int to a String to even a Queue. These methods perform a task and get a value which they then send back to wherever it was called.These methods are called return methods because you send a value back to where it was called using a return statement. Another kind of method is a void method which performs a task, but does not return anything to where it was called. Each method has its own distinct name. A method may or may not need parameters or values to be passed in it for it to be able to perform the function it needs to. These parameters also can be any type of data type or data structure. They are useful to be able to access the local variables in another method without having to declare it globally.");
+	label6.setPrefSize(500, 2000);
+	GridPane.setConstraints(label6, 6, 2);
+	TextArea textfield6 = new TextArea("import java.util.*;\nimport java.io.*;\npublic class Queue{\n\u0009public static void main(String args[]){\n\u0009        int first = 0;\n                int second = 1;\n                fib(first, second);\n\u0009}\n        public void fib(int fir, int sec){\n                System.out.println(fir);\n                System.out.println(sec);\n                while(sec>fir){\n                       int temp = sec;\n                       sec = fir + sec;\n                       fir = temp;\n                       System.out.println(sec);\n                }\n        }\n}");
+	grid6.add(textfield6, 12, 2);
+	
+	Label label7 = new Label();
+	label7.setWrapText(true);
+	label7.setText("Java has built in libraries which can be accessed at anytime without importing anything. This is extremely useful when doing complex math operations. For example, you can do operation like squaring, square rooting, cubing, absolute value, and trig operations. This is extremely useful to not waste time writing all of the code for these operations out manually. If you know that Java has a built in library for something, you can easily save time by not writing the code out by hand and using what is provided for you. Create a program that will find the absolut value of a random number, then square it.");
+	label7.setPrefSize(500, 2000);
+	GridPane.setConstraints(label7, 6, 2);
+	TextArea textfield7 = new TextArea("import java.util.*;\nimport java.io.*;\npublic class Queue{\n\u0009public static void main(String args[]){\n\u0009        int first = (int)((Math.random()*10)+1);\n                int second = (int)((Math.random()*10)+first);\n                fib(first, second);\n\u0009}\n        public void fib(int fir, int sec){\n                System.out.println(fir);\n                System.out.println(sec);\n                while(sec>fir){\n                       int temp = sec;\n                       sec = fir + sec;\n                       fir = temp;\n                       System.out.println(Math.round(sec));\n                }\n        }\n}");
+	grid7.add(textfield7, 12, 2);
+	
+	
+	
+   Button submit0 = new Button("Submit");
+   GridPane.setConstraints(submit0, 12, 1);
+   Button lesson0 = new Button("Go to lesson 0");
+   GridPane.setConstraints(lesson0, 5, 2);
+   grid0.getChildren().addAll(menubutton, label0, submit0);  
+   Scene scene0 = new Scene(grid0, 1000, 600);
+   lesson0.setOnAction(e -> window.setScene(scene0));
+   submit0.setOnAction(e -> JOptionPane.showMessageDialog(null, "Good Job!"));
+   
+   
+   Button submit1 = new Button("Submit");
+   GridPane.setConstraints(submit1, 12, 1);
+   Button lesson1 = new Button("Go to lesson 1");
+   GridPane.setConstraints(lesson1, 6, 2);
+   grid1.getChildren().addAll(menubutton1, label1 ,submit1);
+   Scene scene1 = new Scene(grid1, 1000, 600);
+   lesson1.setOnAction(e -> window.setScene(scene1));
+   submit1.setOnAction(e -> JOptionPane.showMessageDialog(null, "Good Job!"));
+   
+   Button submit2 = new Button("Submit");
+   GridPane.setConstraints(submit2, 12, 1);
+   Button lesson2 = new Button("Go to lesson 2");
+   GridPane.setConstraints(lesson2, 7, 2);
+   grid2.getChildren().addAll(menubutton2, label2, submit2);
+   Scene scene2 = new Scene(grid2, 1000, 600);
+   lesson2.setOnAction(e -> window.setScene(scene2));
+   submit2.setOnAction(e -> JOptionPane.showMessageDialog(null, "Good Job!"));
+   
+   
+   Button submit3 = new Button("Submit");
+   GridPane.setConstraints(submit3, 12, 1);
+   Button lesson3 = new Button("Go to lesson 3");
+   GridPane.setConstraints(lesson3, 5, 4);
+   grid3.getChildren().addAll(menubutton3, label3, submit3);
+   Scene scene3 = new Scene(grid3, 1000, 600);
+   lesson3.setOnAction(e -> window.setScene(scene3));
+   submit3.setOnAction(e -> JOptionPane.showMessageDialog(null, "Good Job!"));
+   
+   Button submit4 = new Button("Submit");
+   GridPane.setConstraints(submit4, 12, 1);
+   Button lesson4 = new Button("Go to lesson 4");
+   GridPane.setConstraints(lesson4, 6, 4);
+   grid4.getChildren().addAll(menubutton4,label4, submit4);
+   Scene scene4 = new Scene(grid4, 1000, 600);
+   lesson4.setOnAction(e -> window.setScene(scene4));
+   submit4.setOnAction(e -> JOptionPane.showMessageDialog(null, "Good Job!"));
+   
+   Button submit5a = new Button("Submit");
+   GridPane.setConstraints(submit5a, 12, 1);
+   Button lesson5a = new Button("Go to lesson 5a");
+   GridPane.setConstraints(lesson5a, 2, 1);
+   grid5a.getChildren().addAll(menubutton5a, label5a, submit5a);
+   Scene scene5a = new Scene(grid5a, 1000, 600);
+   lesson5a.setOnAction(e -> window.setScene(scene5a));
+   submit5a.setOnAction(e ->JOptionPane.showMessageDialog(null, "Good Job!"));
+   
+   Button submit5b = new Button("Submit");
+   GridPane.setConstraints(submit5b, 12, 1);
+   Button lesson5b = new Button("Go to lesson 5b");
+   GridPane.setConstraints(lesson5b, 2, 3);
+   grid5b.getChildren().addAll(menubutton5b,  label5b, submit5b);
+   Scene scene5b = new Scene(grid5b, 1000, 600);
+   lesson5b.setOnAction(e -> window.setScene(scene5b));
+   submit5b.setOnAction(e -> JOptionPane.showMessageDialog(null, "Good Job!"));
+   
+   Button submit5c = new Button("Submit");
+   GridPane.setConstraints(submit5c, 12, 1);
+   Button lesson5c = new Button("Go to lesson 5c");
+   GridPane.setConstraints(lesson5c, 2, 5);
+   grid5c.getChildren().addAll(menubutton5c,  label5c, submit5c);
+   Scene scene5c = new Scene(grid5c, 1000, 600);
+   lesson5c.setOnAction(e -> window.setScene(scene5c));
+   submit5c.setOnAction(e -> JOptionPane.showMessageDialog(null, "Good Job!"));
+   
+   Button submit5d = new Button("Submit");
+   GridPane.setConstraints(submit5d, 12, 1);
+   Button lesson5d = new Button("Go to lesson 5d");
+   GridPane.setConstraints(lesson5d, 4, 2);
+   grid5d.getChildren().addAll(menubutton5d,label5d, submit5d);
+   Scene scene5d = new Scene(grid5d, 1000, 600);
+   lesson5d.setOnAction(e -> window.setScene(scene5d));
+   submit5d.setOnAction(e -> JOptionPane.showMessageDialog(null, "Good Job!"));
+   
+   Button submit5e = new Button("Submit");
+   GridPane.setConstraints(submit5e, 12, 1);
+	Button lesson5e = new Button("Go to lesson 5e");
+	GridPane.setConstraints(lesson5e, 4, 4);
+	grid5e.getChildren().addAll(menubutton5e, label5e, submit5e);
+	Scene scene5e = new Scene(grid5e, 1000, 600);
+	lesson5e.setOnAction(e -> window.setScene(scene5e));
+
+   submit5e.setOnAction(e -> JOptionPane.showMessageDialog(null, "Good Job!"));
+   
+  //no submit button needed
+   Button lesson5 = new Button("Go to lesson 5");
+   GridPane.setConstraints(lesson5, 7, 4);
+   grid5.getChildren().addAll(menubutton5, lesson5a, lesson5b, lesson5c, lesson5d, lesson5e);
+   Scene scene5 = new Scene(grid5, 1000, 600);
+   lesson5.setOnAction(e -> window.setScene(scene5));
+   
+   Button submit6 = new Button("Submit");
+   GridPane.setConstraints(submit6, 12, 1);
+	Button lesson6 = new Button("Go to lesson 6");
+	GridPane.setConstraints(lesson6, 5, 6);
+	grid6.getChildren().addAll(menubutton6, label6, submit6);
+	Scene scene6 = new Scene(grid6, 1000, 600);
+	lesson6.setOnAction(e -> window.setScene(scene6));
+	PrintWriter pw = new PrintWriter("Method.java");
+	  submit6.setOnAction(e -> JOptionPane.showMessageDialog(null, "Good Job!"));
+
+
+  
+   
+   Button submit7 = new Button("Submit");
+   GridPane.setConstraints(submit7, 12, 1);
+   Button lesson7 = new Button("Go to lesson 7");
+	GridPane.setConstraints(lesson7, 6, 6);
+	grid7.getChildren().addAll(menubutton7, label7, submit7);
+	Scene scene7 = new Scene(grid7, 1000, 600);
+	lesson7.setOnAction(e -> window.setScene(scene7));
+   submit7.setOnAction(e -> JOptionPane.showMessageDialog(null, "Good Job!"));
+   
+   //rewrite into credits 
+   Button lesson8 = new Button("credits");
+   GridPane.setConstraints(lesson8, 7, 6);
+   grid8.getChildren().addAll(menubutton8); 
+   Scene scene8 = new Scene(grid8, 1000, 600);
+   lesson8.setOnAction(e -> window.setScene(scene8));
+   
+   
+
+  gridmenu.getChildren().addAll(nameLabel, lesson0,lesson1, lesson2, lesson3, lesson4, lesson5, lesson6, lesson7, lesson8 /*choiceBox*/);
+  window.setScene(scene);
+  scene.getStylesheets().add("frost.css");
+  scene0.getStylesheets().add("frost.css");
+  scene1.getStylesheets().add("frost.css");
+  scene2.getStylesheets().add("frost.css");
+  scene3.getStylesheets().add("frost.css");
+  scene4.getStylesheets().add("frost.css");
+  scene5.getStylesheets().add("frost.css");
+  scene5a.getStylesheets().add("frost.css");
+  scene5b.getStylesheets().add("frost.css");
+  scene5c.getStylesheets().add("frost.css");
+  scene5d.getStylesheets().add("frost.css");
+  scene5e.getStylesheets().add("frost.css");
+  scene6.getStylesheets().add("frost.css");
+  scene7.getStylesheets().add("frost.css");
+  scene8.getStylesheets().add("frost.css");
+  window.show();
+ }
+
+ @Override
+ public void handle(Event arg0) {
+  // TODO Auto-generated method stub
+  
+ }
+ public void dl(String s, PrintWriter pw){
+     pw.write(s);
+     pw.close();
+ }
+
+ public static void printLines(String name, InputStream ins)
+   		 throws Exception {
+   	 String line = null;
+   	 BufferedReader in = new BufferedReader(new InputStreamReader(ins));
+   	 while ((line = in.readLine()) != null) {
+   		 System.out.println(name + " " + line);
+   	 }
+ }
+ public static void runProcess(String command) throws Exception {
+   	 Process pro = Runtime.getRuntime().exec(command);
+   	 printLines(command + " stdout:", pro.getInputStream());
+   	 printLines(command + " stderr:", pro.getErrorStream());
+   	 pro.waitFor();
+   	 System.out.println(command + " exitValue() " + pro.exitValue());
+    }
+ public static void run(){
+   	 try {
+   		 runProcess("javac HelloWorld.java");
+   		 runProcess("java HelloWorld");
+   	 } catch (Exception e) {
+   		 e.printStackTrace();
+   	 }
+    }
+
+
+}
+
+
+
+
+
+.root{
+-fx-background-color:
+    linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%),
+    linear-gradient(#020b02, #3a3a3a),
+    linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%),
+    linear-gradient(#8a8a8a 0%, #6b6a6b 20%, #343534 80%, #262626 100%),
+    linear-gradient(#777777 0%, #606060 50%, #505250 51%, #2a2b2a 100%);
+-fx-background-insets: 0,1,4,5,6;
+-fx-background-radius: 9,8,5,4,3;
+-fx-font-size: 9pt;
+-fx-font-type: ComicSans;
+}
+.button {
+	-fx-background-color: linear-gradient(#dc9656, #ab4642);
+	-fx-background-radius: 6;
+}
+.label {
+	-fx-text-fill: #00ffff;
+	
+	}
+	   
+
+  
